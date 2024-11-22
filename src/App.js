@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar"; // Navigation Bar
 import About from "./components/About";   // About Section
-import Projects from "./components/Projects"; // Projects Section
+import Portfolio from "./components/Portfolio"; // Portfolio Section
 import Contact from "./components/Contact"; // Contact Section
+import Resume from "./components/Resume"; // Contact Section
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
       {/* About Section */}
       <About />
 
+      {/* About Section */}
+      <Resume />
+
       {/* Projects Section */}
-      <Projects />
+      <Portfolio />
 
       {/* Contact Section */}
       <Contact />

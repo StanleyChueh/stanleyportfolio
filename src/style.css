@@ -15,5 +15,14 @@ header {
 }
 
 section {
-    padding: 20px;
+    width: 80%; /* Optional: Adjusts the width of each section for better alignment */
+    margin-bottom: 20px; /* Adds spacing between sections */
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
 }
