@@ -1,28 +1,46 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    width: 80%; /* Optional: Adjusts the width of each section for better alignment */
-    margin-bottom: 20px; /* Adds spacing between sections */
-}
-
-h2 {
-    margin-bottom: 15px;
-}
-
-p {
     line-height: 1.6;
-}
+    font-size: 16px;
+  }
+  
+  section {
+    padding: 50px 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  section:last-child {
+    border-bottom: none;
+  }
+  
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  footer {
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  p {
+    font-size: 18px; /* Slightly larger for better readability */
+  }
+ 
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Slightly smaller for mobile devices */
+    }
+  } 

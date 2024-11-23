@@ -44,3 +44,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+ul li a:hover {
+  color: #ff6347; /* Changes text color on hover */
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #007bff; /* Changes project title color on hover */
+  cursor: pointer;
+}
+
+.active a {
+  color: #ff6347; /* Highlight color */
+  text-decoration: underline;
+}

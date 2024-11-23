@@ -6,7 +6,7 @@ const Resume = () => {
             <h2>Resume</h2>
             <div>
                 <h3>Education</h3>
-                <p>Bachelor in Electrical Engineering</p>
+                <p>Bachelor in Electrical Engineering(Overall GPA:3.68/4.0)</p>
                 {/* Include the rest of your resume content */}
             </div>
             <div>
