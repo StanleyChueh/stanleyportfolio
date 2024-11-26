@@ -1,0 +1,103 @@
+.resume-section {
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+    color: #ffc107;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+  
+  .resume-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .resume-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .resume-category {
+    margin: 2rem 0;
+    text-align: left;
+  }
+  
+  .resume-category h3 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #ffc107;
+  }
+  
+  .resume-card {
+    background: #1e1e2f;
+    padding: 1rem;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .resume-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resume-card span {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .resume-card p {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .skills-grid span {
+    background: #252542;
+    color: #ffc107;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .skills-grid span:hover {
+    background: #ffc107;
+    color: #252542;
+    transform: scale(1.1);
+  }
+  
+  .download-resume {
+    margin-top: 2rem;
+  }
+  
+  .download-button {
+    background: #ffc107;
+    color: #252542;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .download-button:hover {
+    background: #fff;
+    color: #252542;
+    transform: scale(1.05);
+  }
+  

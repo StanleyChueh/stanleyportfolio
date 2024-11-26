@@ -1,0 +1,58 @@
+.navbar {
+    background-color: #111;
+    padding: 15px 1px;
+    display: flex;
+    justify-content: space-between; /* Space out SC logo and nav links */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px; /* Move links slightly left */
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links li a {
+    background: none;
+    border: none;
+    color: #ffc107;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #fff;
+  }
+  
+  .nav-links li a.active {
+    color: #fff;
+    text-decoration: underline; /* Optional for active state */
+}
+
+  .sc-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFC107, #FF5722); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .sc-logo:hover {
+    background: linear-gradient(to right, #FF5722, #FFC107); /* Reverse gradient on hover */
+  }
+  

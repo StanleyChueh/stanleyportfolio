@@ -1,0 +1,117 @@
+.contact-section {
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+    color: #ffc107;
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-input, .form-textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    background: #1e1e2f;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .form-input:focus, .form-textarea:focus {
+    border-color: #fff;
+    background: #252542;
+  }
+  
+  .form-textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .send-button {
+    background: #ffc107;
+    color: #252542;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .send-button:hover {
+    background: #fff;
+    color: #252542;
+    transform: scale(1.05);
+  }
+  
+  .contact-info {
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center; /* Ensures the text is centered */
+  }
+  
+  .contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adds spacing between the icon and text */
+    justify-content: center; /* Ensures everything is centered horizontally */
+    font-size: 1.1rem;
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-link:hover {
+    color: #fff;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  .connect-with-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem; /* Add spacing between the section and Location */
+  }
+  
+  .connect-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items within the container */
+    justify-content: center; /* Center align vertically */
+    gap: 0.5rem; /* Adds spacing between items */
+  }
+  

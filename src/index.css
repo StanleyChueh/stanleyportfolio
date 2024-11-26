@@ -1,11 +1,9 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial', sans-serif; /* Ensure a readable font */
+  font-size: 16px; /* Standardize font size */
+  line-height: 1.5; /* Proper line height for all text */
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,4 +16,28 @@ code {
   width: 100%;
   background-color: #333;
   z-index: 1000;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure App covers the full viewport */
+  background-color: #111;
+}
+
+.section-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Ensure consistent padding */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: visible; /* Allow vertical growth */
+}
+
+section {
+  min-height: auto; /* Dynamically adjust height based on content */
+  padding: 50px 20px; /* Ensure spacing around content */
+  margin: 0 auto; /* Center content */
+  max-width: 1200px; /* Optional: Set a max width for readability */
+  box-sizing: border-box; /* Include padding in total dimensions */
 }

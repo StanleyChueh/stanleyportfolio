@@ -1,0 +1,108 @@
+/* Section Container */
+.section-container {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px; /* Centralize the content and limit max width */
+  text-align: left;
+}
+
+/* Header Styling */
+.content-header h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffdd57; /* Bright, standout title color */
+  text-transform: uppercase;
+}
+
+.content-header p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Main Image Section */
+.main-image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 300px; /* Further reduced for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto; /* Center the image */
+}
+
+
+.main-image:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* Gallery Section */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-height: 200px; /* Limit height for better scaling */
+  object-fit: cover; /* Crop images for consistent sizes */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .content-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-header p {
+    font-size: 0.9rem;
+  }
+
+  .section-container {
+    padding: 10px;
+  }
+}
+
+.project-detail-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #121212;
+}
+
+.video-container {
+  margin: 20px 0;
+  text-align: center;
+}
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

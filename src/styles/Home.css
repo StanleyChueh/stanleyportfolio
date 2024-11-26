@@ -1,0 +1,67 @@
+/* General Container Styling */
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text */
+}
+
+/* First Line (Greeting) */
+.greeting {
+  font-size: 2.5rem;
+  color: #ffc107; /* Yellow color */
+  margin-bottom: 10px;
+}
+
+/* Waving Hand Animation */
+.wave {
+  display: inline-block;
+  transform-origin: 70% 80%; /* Set the bottom of the hand as the pivot point */
+  animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Second Line (Name) */
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffc107; /* Yellow */
+  margin-bottom: 20px;
+}
+
+/* Third Line (Typewriter) */
+.typewriter {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #a9f0d1; /* Aqua green */
+  margin-top: 10px;
+}
+
+/* Optional Cursor Blink Styling */
+.cursor {
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #a9f0d1;
+  }
+}
