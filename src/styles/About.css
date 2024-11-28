@@ -1,105 +1,238 @@
+/* General About Section Styling */
 .about-section {
-    padding: 2rem;
-    background: #121212;
-    color: #fff;
-  }
-  
-  .about-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-  }
-  
-  .about-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .intro-box {
-    background: #1e1e2f;
-    padding: 1.5rem;
-    border-radius: 10px;
-    display: inline-block;
-  }
-  
-  .skills {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .skill-tag {
-    background: #ffc107;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: #121212;
-    font-weight: bold;
-  }
-  
-  .journey-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .journey-tabs button {
-    background: none;
-    border: none;
-    color: #ffc107;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    transition: 0.3s;
-  }
-  
-  .journey-tabs button.active,
-  .journey-tabs button:hover {
-    background: #ffc107;
-    color: #121212;
-    border-radius: 5px;
-  }
-  
-  .timeline-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background: #1e1e2f;
+  padding: 2rem;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text for better readability */
+}
+
+/* Section Heading */
+.about-section h2 {
+  font-size: 2.5rem; /* Larger font for the title */
+  color: #ffc107; /* Yellow title color */
+  text-align: center; /* Center-align the title */
+  margin-bottom: 1.5rem;
+}
+
+/* About Intro */
+.about-intro {
+  text-align: center;
+  color: #eaeaea; /* Softer white for intro text */
+  margin-bottom: 1.5rem;
+}
+
+.intro-box {
+  padding: 1.5rem;
+  background-color: #1a1a1a; /* Subtle background for intro box */
+  border-radius: 10px; /* Rounded corners */
+  color: #ffc107; /* Contrast for text inside the box */
+  margin-bottom: 1.5rem;
+}
+
+/* Skill Tags */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Space between skill tags */
+  margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+  margin: 0.5rem;
+  font-size: 1rem; /* Standard font size */
+  background-color: #ffc107; /* Yellow background for skill tags */
+  color: #121212; /* Text color for contrast */
+  border-radius: 5px; /* Rounded corners for styling */
+  padding: 6px 12px; /* Add padding for better appearance */
+  font-weight: bold; /* Emphasize skill text */
+}
+
+/* Journey Tabs */
+.journey-tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.journey-tabs button {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.journey-tabs button.active {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.journey-tabs button:hover {
+  transform: scale(1.05);
+}
+
+.journey-tabs button svg {
+  font-size: 1.5rem;
+}
+
+/* Timeline Container */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between timeline items */
+  background-color: #1a1a1a; /* Dark background for timeline */
+  padding: 1.5rem;
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 2rem; /* Add spacing from other sections */
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline-item .circle {
+  width: 15px;
+  height: 15px;
+  background-color: #ffc107; /* Yellow for timeline dot */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.timeline-item .content h4 {
+  font-size: 1.2rem;
+  color: #ffc107; /* Yellow color for headings */
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item span {
+  font-size: 0.9rem;
+  color: #eaeaea; /* Softer white for details */
+}
+
+/* Responsive Styles */
+
+/* For medium screens */
+@media (max-width: 768px) {
+  .about-section {
     padding: 1rem;
-    border-radius: 10px;
-    transition: all 0.3s;
   }
-  
-  .timeline-item .circle {
-    width: 20px;
-    height: 20px;
-    background: #ffc107;
-    border-radius: 50%;
-    flex-shrink: 0;
+
+  .about-section h2 {
+    font-size: 2rem;
   }
-  
-  .timeline-item .content {
-    text-align: left;
+
+  .skills {
+    gap: 5px;
   }
-  
-  .timeline-item h4 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #ffc107;
-  }
-  
-  .timeline-item span {
+
+  .skill-tag {
     font-size: 0.9rem;
-    color: #ccc;
+    padding: 5px 10px;
   }
-  
+
+  .journey-tabs {
+    gap: 10px;
+  }
+
+  .journey-tabs button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .journey-tabs button svg {
+    font-size: 1.5rem; /* Slightly larger icons for tablets */
+  }
+
+  .timeline-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .timeline-item .content h4 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-item span {
+    font-size: 0.8rem;
+  }
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills {
+    flex-direction: column; /* Stack skill tags */
+    gap: 5px;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .journey-tabs {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns for buttons */
+    gap: 12px; /* Space between buttons */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Align buttons vertically */
+  }
+
+  .journey-tabs button {
+    font-size: 1rem; /* Standard readable text size */
+    width: 130px; /* Fixed button width */
+    height: 50px; /* Fixed button height */
+    display: flex; /* Align icon and text within the button */
+    justify-content: center; /* Center align both icon and text */
+    align-items: center; /* Vertically center icon and text */
+    gap: 8px; /* Space between icon and text */
+    text-align: center; /* Center align text */
+    background-color: #ffc107; /* Button background color */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Remove border */
+    color: #000; /* Button text color */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s ease;
+  }
+
+  .journey-tabs button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+
+  .journey-tabs button svg {
+    font-size: 1.2rem; /* Icon size adjusted for proper scaling */
+  }
+
+  .journey-tabs button:nth-child(3) {
+    grid-column: 1 / span 2; /* Make the third button span both columns */
+    justify-self: center; /* Center align the third button horizontally */
+  }
+
+  .timeline-container {
+    padding: 0.8rem;
+  }
+
+  .timeline-item .content h4 {
+    font-size: 1rem;
+  }
+
+  .timeline-item span {
+    font-size: 0.7rem;
+  }
+}

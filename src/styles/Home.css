@@ -8,6 +8,8 @@
   text-align: center;
   background-color: #121212; /* Dark background */
   color: #fff; /* White text */
+  padding: 20px; /* Add padding for smaller screens */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* First Line (Greeting) */
@@ -38,18 +40,22 @@
 
 /* Second Line (Name) */
 .name {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #ffc107; /* Yellow */
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 1; /* Adjust line height to fit in one row */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
-/* Third Line (Typewriter) */
 .typewriter {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #a9f0d1; /* Aqua green */
   margin-top: 10px;
+  white-space: nowrap; /* Prevent typewriter text from wrapping */
+  overflow: hidden; /* Ensure text stays within bounds */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
 /* Optional Cursor Blink Styling */
@@ -63,5 +69,39 @@
   }
   to {
     border-color: #a9f0d1;
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting {
+    font-size: 2rem; /* Smaller greeting font size for tablets and smaller devices */
+  }
+
+  .name {
+    font-size: 2.4rem; /* Reduce font size for better fit */
+  }
+
+  .typewriter {
+    font-size: 1.2rem; /* Adjust typewriter font size */
+  }
+  .home-container {
+    padding: 15px; /* Add padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: 1.8rem; /* Further reduce for mobile phones */
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+  }
+  .home-container {
+    padding: 10px; /* Further reduce padding for smaller devices */
   }
 }

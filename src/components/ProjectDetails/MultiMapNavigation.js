@@ -1,99 +1,149 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import '../../styles/ProjectDetail.css';
+import '../../styles/MultiMapNavigation.css';
+
+const projects = [
+  {
+    title: "How to deal with Large-scale map robot navigation?",
+    description:
+      "In this project, we separate map into severals maps, and use Nav2 map_server/load_map to implement the map-switching functionality. \n\nBy leveraging feedback topics during navigation, such as \"goal reached,\" \"initial pose sent,\" and \"map load finished,\" we utilize ROS2 actions to achieve autonomous multi-map navigation.",
+    images: [
+      '/nav_to_pose.gif', // Left GIF
+      '/load_map.gif', // Right GIF
+    ],
+    image:'/AMCL.png',
+    videos: [
+      'https://www.youtube.com/embed/cTmAIjYQQr8',
+      'https://www.youtube.com/embed/v5z_KcWyCbo',
+    ],
+  },  
+  {
+    title: 'NVIDIA Isaac Sim',
+    description:
+      'NVIDIA Isaac Sim provides a simulation platform that enables users to test and simulate robotic systems before deploying them in real-world scenarios. \n\nThe following videos, one is showcasing different path planning algorithms applied to the SPOT robot, while the other one is demonstrating robot navigation in an actual factory environment.',
+    videos: [
+      'https://www.youtube.com/embed/O-7v5eyrMkY',
+      'https://www.youtube.com/embed/FzWhISa2ttQ',
+    ],
+  }
+];
 
 const MultiMapNavigation = () => {
   return (
-    <motion.div
-      className="project-detail-container"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* Header Section */}
-      <header className="project-header">
-        <h1>Boston Dynamics Spot</h1>
-        <p>
-          This project focuses on implementing Boston Dynamics' Spot robot for automated inspection tasks in industrial environments. Under strict cybersecurity regulations, we have developed an advanced automated site inspection and remote monitoring system. The system enables autonomous tasks and real-time monitoring in industrial environments, bringing significant operational benefits and enhancing workplace safety.
-        </p>
-      </header>
-
-      {/* Image Section */}
-      <div className="main-image-container">
-        <img
-          src="/spot_navigation_outdoor.jpg" // Replace with your actual image path
-          alt="Spot robot in action"
-          className="main-image"
+    <div className="project-container">
+      {projects.map((project, index) => (
+        <Section
+          key={index}
+          title={project.title}
+          description={project.description}
+          video={project.video} // Single video
+          videos={project.videos} // Multiple videos
+          images={project.images} // Pass the array of GIFs
+          image={project.image}
         />
-      </div>
-
-      {/* Lidar Localization Section */}
-      <section className="section-container">
-        <h2>Learning Progress</h2>
-        <p>
-          Spot uses an onboard LiDAR scanner to scan the surrounding environment in real time, generating precise three-dimensional point cloud data. The program then utilizes real-time data to predict obstacles and update paths to accommodate dynamic environments. Through the NDT (Normal Distributions Transform) algorithm, Spot can accurately calculate its position and orientation in space.
-        </p>
-        <div className="image-gallery">
-          <img
-            src="/turtlebot.png" // Replace with actual image path
-            alt="Lidar localization example 1"
-            className="gallery-image"
-          />
-          <img
-            src="/lidar_image_2.jpg" // Replace with actual image path
-            alt="Lidar localization example 2"
-            className="gallery-image"
-          />
-        </div>
-      </section>
-
-      {/* Map Switching Section */}
-      <section className="section-container">
-        <h2>Switch Map System</h2>
-        <p>
-          To address the challenge of loading complex maps in large factory environments, we developed a map switching system that utilizes Spot’s APIs to seamlessly transition between various stored map files. The system automatically switches corresponding maps based on Spot's current location, which is determined by predefined paths within environments. This approach ensures optimal coverage and navigation throughout industrial spaces.
-        </p>
-        <div className="diagram-container">
-          <img
-            src="/map_switching_diagram.jpg" // Replace with your diagram image path
-            alt="Map switching system diagram"
-            className="diagram-image"
-          />
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <section className="section-container">
-        <h2>Video</h2>
-        <div className="video-container">
-          <iframe
-            width="100%"
-            height="400"
-            src="https://www.youtube.com/embed/cTmAIjYQQr8" // Replace with your actual YouTube video link
-            title="Spot Map Switch System"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
-
-        {/* Map Switching Section */}
-        <section className="section-container">
-            <h2>Sim To Real</h2>
-                <p>
-                    Isaac Sim spot navigation, and obstacle avoidance test.                
-                </p>
-                <div className="diagram-container">
-                <img
-                    src="/Isaac_Sim_Spot_Navigation.png" // Replace with your diagram image path
-                    alt="Map switching system diagram"
-                    className="diagram-image"
-                />
-            </div>
-        </section>
-    </motion.div>
+      ))}
+    </div>
   );
 };
+
+const Section = ({ title, description, video, videos, images, image }) => {
+  const paragraphs = description.split('\n').filter((paragraph) => paragraph.trim() !== '');
+
+  return (
+    <section className="section-container">
+      <div className="content-header">
+        <h2>{title}</h2>
+        <div className="description-container">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className="description-paragraph">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {title === 'NVIDIA Isaac Sim' && videos && videos.length > 0 && (
+    <div className="videos-container">
+      {videos.map((videoUrl, index) => (
+        <iframe
+          key={index}
+          className="responsive-iframe"
+          src={videoUrl}
+          title={`${title} Video ${index + 1}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ))}
+    </div>
+  )}
+
+          
+      {/* Display Multiple GIFs side by side if available */}
+      {images && images.length === 2 && (
+        <div className="gif-container">
+          <img src={images[0]} alt={`${title} GIF Left`} className="gif" />
+          <img src={images[1]} alt={`${title} GIF Right`} className="gif" />
+        </div>
+      )}
+
+    {videos && title === "How to deal with Large-scale map robot navigation?" && (
+      <>
+        {videos.map((videoUrl, index) => (
+          <div key={index} className="video-section">
+            <div className="subtitle-container">
+              <h3>
+                {index === 0
+                  ? "How about make it autonomously?"
+                  : "How to improve it?"}
+              </h3>
+            </div>
+            {index === 0 && (
+            <div className="video-container-center">
+              {/* Video for "How about make it autonomously?" */}
+              <iframe
+                src={videoUrl}
+                title={`${title} Video ${index + 1}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="responsive-iframe"
+              ></iframe>
+            </div>
+            )}
+            {index === 1 && image && (
+            <div className="image-video-container">
+              {/* Image on the left */}
+              <div className="image-container-left">
+                <img
+                  src={image}
+                  alt="AMCL Visualization"
+                  className="amcl-image"
+                />
+              </div>
+              
+              {/* Video on the right */}
+              <div className="video-container-right">
+                <iframe
+                  src={videoUrl}
+                  title={`${title} Video ${index + 1}`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="video-iframe"
+                ></iframe>
+              </div>
+            </div>
+          )}
+          </div>
+        ))}
+      </>
+    )}
+
+
+
+
+    </section>
+  );
+};
+
 
 export default MultiMapNavigation;

@@ -7,34 +7,34 @@ const projectData = [
   {
     id: 1,
     title: 'Multi-map Navigation',
-    description: 'Robot navigation through different maps',
+    description: 'A way to navigate through multiple maps effectively.',
     tags: ['ROS2', 'Navigation2', 'NVIDIA Isaac Sim','Spot/Turtlebot', 'AprilTag'],
     category: 'Robotic',
     detailPage: '/projects/multi-map-navigation',
   },
   {
     id: 2,
-    title: 'Portfolio Website',
-    description: 'Personal portfolio website with interactive features',
-    tags: ['React', 'Framer Motion', 'Tailwind CSS'],
-    category: 'Others',
-    detailPage: '/projects/portfolio-website',
+    title: 'Robotic Vision',
+    description: 'Robotic vision is a crucial aspect of robot perception, enabling robots to understand their position for further applications.',
+    tags: ['Depth camera', 'Object Detection', 'Edge-AI', 'VSLAM'],
+    category: 'Robotic',
+    detailPage: '/projects/robotic-vision',
   },
   {
     id: 3,
-    title: 'Robotic Vision',
-    description: 'Collaborative task management application',
-    tags: ['React', 'Firebase', 'Material-UI'],
-    category: 'Robotic',
-    detailPage: '/projects/RoboticVision',
+    title: 'International Competition/Workshop',
+    description: 'International insights and cooperation with companies and overseas students.',
+    tags: ['Communication', 'Industrial cooperation', 'International'],
+    category: 'Others',
+    detailPage: '/projects/Workshop',
   },
   {
     id: 4,
-    title: 'Robotic Vision',
-    description: 'Collaborative task management application',
-    tags: ['React', 'Firebase', 'Material-UI'],
+    title: 'Reinforcement Learning In Robotic',
+    description: 'Implement Reinforcement learning in robotic,for example,obstacle avoidance,bipedal robot control etc.',
+    tags: ['PPO', 'SAC', 'Gazebo', 'Obstacle Avoidance'],
     category: 'Robotic',
-    detailPage: '/projects/RoboticVision',
+    detailPage: '/projects/ReinforcementLearning',
   },
 ];
 
@@ -68,6 +68,7 @@ const Portfolio = () => {
           >
             {category}
           </button>
+          
         ))}
       </div>
 

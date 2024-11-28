@@ -87,3 +87,40 @@
     transition: transform 0.3s ease;
   }
   
+  /* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .skills-category {
+    padding: 15px;
+    border-left-width: 3px; /* Reduced border width for a cleaner look */
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between; /* Maintain consistent alignment */
+  }
+
+  .skill-label {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .progress-bar-container {
+    height: 8px; /* Reduced height for better proportion */
+  }
+
+  .skill-percentage {
+    text-align: left;
+    margin-left: 10px; /* Added margin to align with the label */
+    color: #ffc107; /* Adjusted color for better visibility */
+  }
+}

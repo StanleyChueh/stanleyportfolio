@@ -32,7 +32,7 @@ const Contact = () => {
           required
           aria-label="Your Message"
         ></textarea>
-        <a href="mailto:your.email@example.com" className="send-button">
+        <a href="mailto:stanleychueh28@gmail.com" className="send-button">
           Send Message <FaEnvelope />
         </a>
       </form>
@@ -40,7 +40,7 @@ const Contact = () => {
       <div className="contact-info">
         <div className="connect-icons">
           <h3>Connect With Me</h3>
-          <a href="mailto:your.email@example.com" className="contact-link">
+          <a href="mailto:stanleychueh28@gmail.com" className="contact-link">
             <FaEnvelope /> stanleychueh28@gmail.com
           </a>
           <a href="https://github.com/StanleyChueh" className="contact-link" target="_blank" rel="noopener noreferrer">

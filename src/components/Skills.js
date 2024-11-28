@@ -1,10 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Skills.css';
-import { FaReact, FaFigma, FaGitAlt } from 'react-icons/fa';
-import { DiJavascript1, DiCss3, DiHtml5 } from 'react-icons/di';
-import { BsBarChart } from 'react-icons/bs'; // Ensure `react-icons` is installed
-import { ReactComponent as ROS2Icon } from '../assets/ROS2.svg';
 
 const Skills = () => {
   const skills = [
@@ -13,16 +9,16 @@ const Skills = () => {
       skills: [
         { name: "ROS/ROS2", percentage: 90,},
         { name: "Nav2", percentage: 85,},
-        { name: "AprilTag", percentage: 88,},
-        { name: "VSLAM", percentage: 95,},
+        { name: "Robotic Vision", percentage: 88,},
+        { name: "NVIDIA Isaac Sim", percentage: 80,},
       ],
       color: "#ffc107",
     },
     {
       category: "Software Development",
       skills: [
-        { name: "C++", percentage: 85},
-        { name: "Python", percentage: 80,},
+        { name: "C++", percentage: 80},
+        { name: "Python", percentage: 85,},
         { name: "MATLAB", percentage: 75,},
       ],
       color: "#6a1b9a",
@@ -30,7 +26,7 @@ const Skills = () => {
     {
       category: "Development Tools",
       skills: [
-        { name: "Git", percentage: 85,},
+        { name: "Git", percentage: 80,},
         { name: "VS Code", percentage: 90,},
         { name: "Linux", percentage: 88,},
         { name: "Chrome DevTools", percentage: 88,},

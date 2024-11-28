@@ -5,25 +5,22 @@ const projects = [
   {
     title: 'AprilTag Follower',
     description:
-      "This project focuses on implementing Boston Dynamics' Spot robot for automated inspection tasks in industrial environments. Under strict cybersecurity regulations, we have developed an advanced automated site inspection and remote monitoring system. This system aims to enhance automation levels and monitoring efficiency in industrial environments, bringing significant operational benefits and competitive advantages to enterprises.",
-    video: 'https://www.youtube.com/embed/G7uM_Zrr7wo', // Add video URL heres
+      "This project uses AprilTag detection and multi-robot control to enhance warehouse and logistics operations. \n\nRobots can form teams for specific tasks or regroup for larger missions, enabling flexible, efficient, and scalable solutions for dynamic and complex workflows..",
+    video: 'https://www.youtube.com/embed/G7uM_Zrr7wo', // Add video URL here
   },
   {
     title: 'Object Detection & Obstacle Avoidance',
     description:
-      'Spot uses its onboard LiDAR sensor to scan the surrounding environment in real-time, generating precise three-dimensional point cloud data. The system compares these real-time collected 3D point cloud information with pre-established environmental maps. Through the 3D NDT (Normal Distributions Transform) algorithm, Spot can accurately calculate its position and orientation in space.',
+      'This project focuses on object detection and obstacle avoidance using a Turtlebot. \n\nThe robot explores the map, avoids obstacles, and actively reroutes when needed. If a human is detected, it adjusts its behavior accordingly.',
     video: 'https://www.youtube.com/embed/sTnDYR7xIf0', // Add video URL here
-    gallery: [
-      { src: '/lidar_image_1.jpg', alt: 'Lidar Image 1' },
-    ],
   },
   {
     title: 'VSLAM',
     description:
-      'Spot uses its onboard LiDAR sensor to scan the surrounding environment in real-time, generating precise three-dimensional point cloud data. The system compares these real-time collected 3D point cloud information with pre-established environmental maps. Through the 3D NDT (Normal Distributions Transform) algorithm, Spot can accurately calculate its position and orientation in space.',
-    video: 'https://www.youtube.com/embed/e425LBQ4jrI', // Add video URL here
-    gallery: [
-      { src: '/lidar_image_1.jpg', alt: 'Lidar Image 1' },
+      'Visual Simultaneous Localization and Mapping (VSLAM) is crucial for implementing robot navigation without relying on LiDAR. \n\nThe following two videos demonstrate VSLAM performance using different approaches: one showcases Isaac ROS VSLAM by NVIDIA, and the other features RTAB-Map SLAM by IntRoLab.',
+    videos: [
+      'https://www.youtube.com/embed/p4SCeYuSRyI', // Left video
+      'https://www.youtube.com/embed/e425LBQ4jrI', // Right video
     ],
   },
 ];
@@ -38,20 +35,25 @@ const RoboticVision = () => {
           description={project.description}
           mainImage={project.mainImage}
           gallery={project.gallery}
-          video={project.video} // Pass the video prop
+          video={project.video} // Single video
+          videos={project.videos} // Multiple videos
         />
       ))}
     </div>
   );
 };
 
-const Section = ({ title, description, mainImage, gallery, video }) => (
+const Section = ({ title, description, mainImage, gallery, video, videos }) => (
   <section className="section-container">
     <div className="content-header">
       <h2>{title}</h2>
-      <p>{description}</p>
+      {/* Split description into paragraphs */}
+      {description.split('\n\n').map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      ))}
     </div>
 
+    {/* Single Video */}
     {video && (
       <div className="video-container">
         <iframe
@@ -63,6 +65,23 @@ const Section = ({ title, description, mainImage, gallery, video }) => (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+      </div>
+    )}
+
+    {/* Two Videos for VSLAM */}
+    {videos && (
+      <div className="videos-container">
+        {videos.map((videoUrl, index) => (
+          <iframe
+            key={index}
+            className="responsive-iframe"
+            src={videoUrl}
+            title={`${title} Video ${index + 1}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        ))}
       </div>
     )}
 

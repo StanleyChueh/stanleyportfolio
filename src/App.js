@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -8,8 +8,9 @@ import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import MultiMapNavigation from './components/ProjectDetails/MultiMapNavigation';
-import PortfolioWebsite from './components/ProjectDetails/PortfolioWebsite';
+import Workshop from './components/ProjectDetails/Workshop';
 import RoboticVision from './components/ProjectDetails/RoboticVision';
+import ReinforcementLearning from './components/ProjectDetails/ReinforcementLearning';
 import './styles/App.css';
 
 function App() {
@@ -28,10 +29,22 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             {/* Project Details Pages */}
-            <Route path="/projects/multi-map-navigation" element={<MultiMapNavigation />} />
-            <Route path="/projects/portfolio-website" element={<PortfolioWebsite />} />
-            <Route path="/projects/RoboticVision" element={<RoboticVision />} />
-            <Route path="/projects/RoboticVision" element={<RoboticVision />} />
+            <Route
+              path="/projects/multi-map-navigation"
+              element={<MultiMapNavigation />}
+            />
+            <Route
+              path="/projects/Workshop"
+              element={<Workshop />}
+            />
+            <Route
+              path="/projects/robotic-vision"
+              element={<RoboticVision />}
+            />
+            <Route
+              path="/projects/ReinforcementLearning"
+              element={<ReinforcementLearning />}
+            />
           </Routes>
         </main>
       </div>

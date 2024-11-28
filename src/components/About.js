@@ -29,20 +29,26 @@ const About = () => {
       description: "Represented NTUT in an international industrial cooperation with COMPAL Inc.",
       period: "June 2024 - Aug 2024",
     },
+    {
+      title: "IWCE Conference Paper",
+      organization: "IWCE",
+      description: "Honorable Mention in GenAI Field",
+      period: "Dec 2023",
+    },
   ];
 
   const experienceData = [
     {
       title: "Assistant Engineer",
-      organization: "InstAI Inc.",
-      description: "Assisted in optimizing AI models and data analysis",
-      period: "Aug 2023 - Nov 2024",
+      organization: "City Science Lab @ Taipei Tech",
+      description: "Developed robotic software systems",
+      period: "Sep 2023 - Present",
     },
     {
       title: "Assistant Engineer",
-      organization: "City Science Lab @ Taipei Tech",
-      description: "Developed robotic software systems",
-      period: "Jun 2019 - Dec 2019",
+      organization: "InstAI Inc.",
+      description: "Assisted in optimizing AI models and data analysis",
+      period: "Aug 2023 - Nov 2024",
     },
   ];
 
@@ -50,7 +56,7 @@ const About = () => {
     const data =
       activeTab === 'education'
         ? educationData
-        : activeTab === 'competitions'
+        : activeTab === 'contests'
         ? competitionData
         : experienceData;
 
@@ -103,16 +109,16 @@ const About = () => {
           <FaGraduationCap /> Education
         </button>
         <button
-          className={activeTab === 'competitions' ? 'active' : ''}
-          onClick={() => setActiveTab('competitions')}
+          className={activeTab === 'contests' ? 'active' : ''}
+          onClick={() => setActiveTab('contests')}
         >
-          <FaTrophy /> Competitions
+          <FaTrophy /> Contests
         </button>
         <button
           className={activeTab === 'experience' ? 'active' : ''}
           onClick={() => setActiveTab('experience')}
         >
-          <FaBriefcase /> Work Experience
+          <FaBriefcase /> Experience
         </button>
       </div>
 
