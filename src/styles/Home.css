@@ -1,28 +1,60 @@
-/* General Container Styling */
 .home-container {
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-color: #121212; /* Dark background */
-  color: #fff; /* White text */
-  padding: 20px; /* Add padding for smaller screens */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  padding: 20px;
 }
 
-/* First Line (Greeting) */
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  background: url('../assets/hero-background.JPG') no-repeat center center/cover;
+  height: 50vh; /* Adjust height to occupy top half of the page */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align content to the bottom of the section */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide overflow for cleaner layout */
+}
+
+/* Background Overlay */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text readability */
+  z-index: 1; /* Below content card */
+}
+
+/* Content Card Styling */
+.content-card {
+  position: relative;
+  z-index: 2; /* Above the overlay */
+  background-color: rgba(255, 255, 255, 0.9); /* Light background to ensure readability */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Greeting Styling */
 .greeting {
   font-size: 2.5rem;
-  color: #ffc107; /* Yellow color */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: inherit;
 }
 
 /* Waving Hand Animation */
 .wave {
   display: inline-block;
-  transform-origin: 70% 80%; /* Set the bottom of the hand as the pivot point */
+  transform-origin: 70% 80%;
   animation: wave-animation 2s infinite;
 }
 
@@ -38,24 +70,20 @@
   }
 }
 
-/* Second Line (Name) */
+/* Name Styling */
 .name {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #ffc107; /* Yellow */
-  margin-bottom: 15px;
-  line-height: 1; /* Adjust line height to fit in one row */
-  white-space: nowrap; /* Prevent wrapping */
+  color: inherit;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Typewriter Styling */
 .typewriter {
   font-size: 1.5rem;
-  font-weight: 500;
-  color: #a9f0d1; /* Aqua green */
-  margin-top: 10px;
-  white-space: nowrap; /* Prevent typewriter text from wrapping */
-  overflow: hidden; /* Ensure text stays within bounds */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  margin-top: 15px;
+  color: inherit;
 }
 
 /* Optional Cursor Blink Styling */
@@ -63,27 +91,51 @@
   animation: blink 0.7s step-end infinite;
 }
 
+/* Primary Button Styling */
+.primary-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 @keyframes blink {
   from {
     border-color: transparent;
   }
   to {
-    border-color: #a9f0d1;
+    border-color: inherit;
   }
 }
 
 @media (max-width: 768px) {
   .greeting {
-    font-size: 2rem; /* Smaller greeting font size for tablets and smaller devices */
+    font-size: 2rem;
   }
 
   .name {
-    font-size: 2.4rem; /* Reduce font size for better fit */
+    font-size: 2.4rem;
   }
 
   .typewriter {
-    font-size: 1.2rem; /* Adjust typewriter font size */
+    font-size: 1.2rem;
   }
+
+  .content-card {
+    padding: 20px;
+  }
+
   .home-container {
     padding: 15px; /* Add padding for smaller screens */
   }
@@ -105,3 +157,4 @@
     padding: 10px; /* Further reduce padding for smaller devices */
   }
 }
+

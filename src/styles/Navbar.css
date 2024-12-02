@@ -1,14 +1,32 @@
 /* Navbar Container */
 .navbar {
-  background-color: #111;
-  padding: 15px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent */
+  backdrop-filter: blur(10px); /* Blur effect for better contrast */
+  padding: 15px 30px;
+  color: #ffffff;
   z-index: 1000;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00c6ff; /* Different color on hover to add interactivity */
+}
+
+.theme-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
 }
 
 /* Logo Styling */
