@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Resume.css';
-import { FaBriefcase, FaGraduationCap, FaFolderOpen, FaDownload } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaDownload } from 'react-icons/fa';
 
 const Resume = () => {
   return (
@@ -36,27 +36,6 @@ const Resume = () => {
           <h4>Bachelor's in  Electrical Engineering</h4>
           <span>Sep 2021 - Jun 2025</span>
           <p>National Taipei University of Technology(NTUT) Overall GPA:3.68/4.0</p>
-        </div>
-      </div>
-
-      {/* Projects Experience Section */}
-      <div className="resume-category">
-        <h3>
-          <FaFolderOpen /> Projects Experience
-        </h3>
-        <div className="resume-card">
-          <h4>Autonomous Multi-map Navigation</h4>
-          <span>City Science Lab@Taipei Tech - 2024 (cooperation with TSMC)</span>
-          <p>
-            Developed a navigation system using ROS2 and Nav2, enabling robots to autonomously navigate through multiple maps for industrial inspection.
-          </p>
-        </div>
-        <div className="resume-card">
-          <h4>Custom AI model optimization on edge-devices</h4>
-          <span>InstAI Inc.- 2023 (cooperation with Giant Bicycles)</span>
-          <p>
-            Implemented AI models on edge devices, focusing on optimization for real-time object detection and classification for overseas customer.
-          </p>
         </div>
       </div>
 

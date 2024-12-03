@@ -23,6 +23,13 @@ const projects = [
       'https://www.youtube.com/embed/e425LBQ4jrI', // Right video
     ],
   },
+  {
+    title: 'Visual Navigation',
+    description:
+      'Using Isaac ROS VSLAM(visual odometry), and with fix AprilTag to realize visual navigation(robot made by City Science Lab@Taipei)',
+    video: 
+      'https://www.youtube.com/embed/16C6AmUnL38', 
+  },
 ];
 
 const RoboticVision = () => {

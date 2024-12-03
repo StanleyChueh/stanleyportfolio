@@ -51,13 +51,7 @@
   max-width: 100%; /* Ensure the image scales to fit its container */
   height: auto; /* Maintain the aspect ratio */
   border-radius: 10px; /* Optional: add rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Default shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.single-image:hover {
-  transform: scale(1.05); /* Slightly enlarge the image */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: add a shadow effect */
 }
 
 .main-image {
@@ -127,27 +121,12 @@
 
 .gif {
   width: 48%; /* Consistent width */
-  border-radius: 5px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Default shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gif:hover {
-  transform: scale(1.05); /* Slightly enlarge the GIF */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow */
-}
-
-.gif-below {
-  width: 80%; /* Set consistent size */
-  max-width: 800px; /* Limit size */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Default shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.gif-below:hover {
-  transform: scale(1.05); /* Slightly enlarge the GIF */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+  transform: scale(1.05);
 }
 
 /* Video Container */
