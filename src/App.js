@@ -11,6 +11,8 @@ import MultiMapNavigation from './components/ProjectDetails/MultiMapNavigation';
 import Workshop from './components/ProjectDetails/Workshop';
 import RoboticVision from './components/ProjectDetails/RoboticVision';
 import ReinforcementLearning from './components/ProjectDetails/ReinforcementLearning';
+import RobotNavigationStudy from './components/ProjectDetails/RobotNavigationStudy';
+
 import './styles/App.css';
 
 function App() {
@@ -44,6 +46,10 @@ function App() {
             <Route
               path="/projects/ReinforcementLearning"
               element={<ReinforcementLearning />}
+            />
+            <Route
+              path="/projects/RobotNavigationStudy"
+              element={<RobotNavigationStudy />}
             />
           </Routes>
         </main>

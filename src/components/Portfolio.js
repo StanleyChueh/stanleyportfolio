@@ -36,6 +36,14 @@ const projectData = [
     category: 'Robotic',
     detailPage: '/projects/ReinforcementLearning',
   },
+  {
+    id: 5,
+    title: 'Robot Navigation Study',
+    description: 'Study robot navigation with turtlebot3 without using Nav2',
+    tags: ['Path Planning', 'Path Following', 'Gazebo'],
+    category: 'Robotic',
+    detailPage: '/projects/Robotnavigationstudy',
+  },
 ];
 
 const Portfolio = () => {
