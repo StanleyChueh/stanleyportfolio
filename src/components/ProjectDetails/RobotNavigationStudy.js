@@ -6,8 +6,8 @@ const projects = [
     title: "Robot Navigation Study",
     description: "This projects aims to study robot navigation without using Nav2.",
     images: [
-      '/A_star.png', // Left GIF
-      '/Hybrid_A_star.png', // Right GIF
+      '/A_star.gif', // Left GIF
+      '/Hybrid_a_star.gif', // Right GIF
     ],
   },
   {

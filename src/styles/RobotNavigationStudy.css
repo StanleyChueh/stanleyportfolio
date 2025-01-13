@@ -156,6 +156,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+
 /* Bottom GIF styling */
 .bottom-gif-container {
   text-align: center;
@@ -169,6 +170,20 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* 確保所有 GIF 包括 .gif, .single-image, .top-gif 都有一致的 hover 效果 */
+.gif, .single-image, .top-gif {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑過渡 */
+  border-radius: 10px; /* 可選，統一圓角 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 基礎陰影 */
+}
+
+.gif:hover, .single-image:hover, .top-gif:hover {
+  transform: scale(1.05); /* 放大效果 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* 增強陰影 */
+  filter: brightness(1.2); /* 提升亮度 */
+}
+
+
 
 .gif {
   width: 48%; /* Consistent width */
@@ -177,7 +192,9 @@
 }
 
 .gif:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* 放大效果 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* 陰影加強效果 */
+  filter: brightness(1.2); /* 提升亮度 */
 }
 
 /* Video Container */
