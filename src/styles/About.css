@@ -1,16 +1,22 @@
 /* General About Section Styling */
 .about-section {
-  padding: 2rem;
-  background-color: #121212; /* Dark background */
-  color: #fff; /* White text for better readability */
+  padding: 2rem; /* 預設內距 */
+  background-color: #121212; /* 深色背景 */
+  color: #fff; /* 白色文字 */
+  max-width: 100%; /* 確保容器寬度自適應 */
 }
+
 
 /* Section Heading */
 .about-section h2 {
-  font-size: 2.5rem; /* Larger font for the title */
-  color: #ffc107; /* Yellow title color */
-  text-align: center; /* Center-align the title */
+  font-size: 2.5rem; /* 預設字體大小 */
+  color: #ffc107;
+  text-align: center;
   margin-bottom: 1.5rem;
+  word-wrap: break-word; /* 確保換行 */
+  overflow-wrap: break-word; /* 支援所有瀏覽器 */
+  white-space: normal; /* 允許換行 */
+  line-height: 1.2; /* 增加行高避免擁擠 */
 }
 
 /* About Intro */
@@ -128,8 +134,16 @@
   }
 
   .about-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* 預設字體大小 */
+    color: #ffc107;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word; /* 確保換行 */
+    overflow-wrap: break-word; /* 支援所有瀏覽器 */
+    white-space: normal; /* 允許換行 */
+    line-height: 1.2; /* 增加行高避免擁擠 */
   }
+  
 
   .skills {
     gap: 5px;
@@ -172,8 +186,16 @@
 /* For small screens */
 @media (max-width: 480px) {
   .about-section h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* 預設字體大小 */
+    color: #ffc107;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word; /* 確保換行 */
+    overflow-wrap: break-word; /* 支援所有瀏覽器 */
+    white-space: normal; /* 允許換行 */
+    line-height: 1.5; /* 增加行高避免擁擠 */
   }
+  
 
   .skills {
     flex-direction: column; /* Stack skill tags */

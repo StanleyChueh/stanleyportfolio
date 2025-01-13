@@ -20,11 +20,15 @@
 }
 
 .content-header h2 {
-  font-size: 32px;
+  font-size: 32px; /* 可以調整此字型大小以適配較小螢幕 */
   margin-bottom: 15px;
   color: #ffc107;
   font-weight: bold;
   text-align: center;
+  word-wrap: break-word; /* 確保長文字自動換行 */
+  overflow-wrap: break-word; /* 支援所有瀏覽器的文字換行 */
+  white-space: normal; /* 禁止文字一行顯示，允許換行 */
+  line-height: 1.9; /* 調整行高以防止文字擁擠 */
 }
 
 .content-header p {
@@ -339,6 +343,14 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .content-header h2 {
+    font-size: 24px !important;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
   .section-container .content-header h2 {
     font-size: 24px !important;
     text-align: center;
@@ -391,8 +403,11 @@
 
 @media (max-width: 480px) {
   .content-header h2 {
-    font-size: 18px;
+    font-size: 24px !important;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
 
   .content-header p {

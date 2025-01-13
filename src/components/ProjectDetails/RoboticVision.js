@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'Visual Navigation',
     description:
-      'Using Isaac ROS VSLAM(visual odometry), and with fix AprilTag to realize visual navigation(robot made by City Science Lab@Taipei)',
+      'Using Isaac ROS VSLAM(visual odometry), and with fixed AprilTag to realize visual navigation(robot made by City Science Lab@Taipei)',
     video: 
       'https://www.youtube.com/embed/X7kAB2d0PGs', 
   },
