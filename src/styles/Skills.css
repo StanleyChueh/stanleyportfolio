@@ -93,9 +93,13 @@
   /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
   .skills-container {
-    gap: 20px;
-    padding: 10px;
-  }
+    display: grid; /* 改為使用網格布局 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動適配區塊寬度 */
+    gap: 20px; /* 增加區塊間距 */
+    width: 100%; /* 確保填滿父容器 */
+    padding: 20px; /* 增加內距讓區塊有呼吸空間 */
+    box-sizing: border-box; /* 確保內距計入總寬度 */
+}
 
   .skills-category {
     padding: 15px;
