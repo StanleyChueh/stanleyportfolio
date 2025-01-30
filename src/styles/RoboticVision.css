@@ -19,6 +19,22 @@
   margin-bottom: 20px;
 }
 
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.gif {
+  width: 48%; /* Ensures two GIFs are side by side */
+  max-width: 300px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 .content-header h2 {
   font-size: 32px; /* 可以調整此字型大小以適配較小螢幕 */
   margin-bottom: 15px;

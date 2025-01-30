@@ -10,7 +10,7 @@ const About = () => {
   const educationData = [
     {
       title: "Bachelor's in Electrical Engineering",
-      organization: "National Taipei University of Technology (NTUT) Overall GPA:3.68/4.0",
+      organization: "National Taipei University of Technology (NTUT) Overall GPA:3.7/4.0",
       description: "Focus on robotics and AI systems",
       period: "2021/9 - 2025/6",
     },

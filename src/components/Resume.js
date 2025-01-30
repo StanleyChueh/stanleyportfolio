@@ -35,7 +35,7 @@ const Resume = () => {
         <div className="resume-card">
           <h4>Bachelor's in  Electrical Engineering</h4>
           <span>Sep 2021 - Jun 2025</span>
-          <p>National Taipei University of Technology(NTUT) Overall GPA:3.68/4.0</p>
+          <p>National Taipei University of Technology(NTUT) Overall GPA:3.7/4.0</p>
         </div>
       </div>
 

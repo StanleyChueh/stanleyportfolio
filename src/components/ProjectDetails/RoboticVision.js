@@ -9,10 +9,13 @@ const projects = [
     video: 'https://www.youtube.com/embed/G7uM_Zrr7wo', // Add video URL here
   },
   {
-    title: 'Object Detection & Obstacle Avoidance',
+    title: 'Human-robot Interaction',
     description:
-      'This project focuses on object detection and obstacle avoidance using a Turtlebot. \n\nThe robot explores the map, avoids obstacles, and actively reroutes when needed. If a human is detected, it adjusts its behavior accordingly.',
-    video: 'https://www.youtube.com/embed/sTnDYR7xIf0', // Add video URL here
+      'This project focus on human-robot interaction with Triceratops robot by using AprilTag with different tagID(robot made by City Science Lab@Taipei)',
+    images: [
+      '/head_following.gif', // Left GIF
+      '/body_following.gif', // Right GIF
+    ],
   },
   {
     title: 'VSLAM',
@@ -26,7 +29,7 @@ const projects = [
   {
     title: 'Visual Navigation',
     description:
-      'Using Isaac ROS VSLAM(visual odometry), and with fixed AprilTag to realize visual navigation(robot made by City Science Lab@Taipei)',
+      'Using Isaac ROS VSLAM(visual odometry), and with fixed AprilTag for precise robot localization to realize visual navigation(robot made by City Science Lab@Taipei)',
     video: 
       'https://www.youtube.com/embed/X7kAB2d0PGs', 
   },
@@ -44,13 +47,14 @@ const RoboticVision = () => {
           gallery={project.gallery}
           video={project.video} // Single video
           videos={project.videos} // Multiple videos
+          images={project.images} 
         />
       ))}
     </div>
   );
 };
 
-const Section = ({ title, description, mainImage, gallery, video, videos }) => (
+const Section = ({ title, description, mainImage, gallery, video, videos, images }) => (
   <section className="section-container">
     <div className="content-header">
       <h2>{title}</h2>
@@ -72,6 +76,15 @@ const Section = ({ title, description, mainImage, gallery, video, videos }) => (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+      </div>
+    )}
+
+    {/*Two GIFS for human-robot Interactio*/}
+    {images && (
+      <div className="gif-container">
+        {images.map((image, index) => (
+          <img key={index} src={image} alt={`gif-${index}`} className="gif" />
+        ))}
       </div>
     )}
 
