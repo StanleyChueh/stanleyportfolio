@@ -4,12 +4,13 @@
   background-color: #121212; /* 深色背景 */
   color: #fff; /* 白色文字 */
   max-width: 100%; /* 確保容器寬度自適應 */
+  font-size: inherit;
 }
 
 
 /* Section Heading */
 .about-section h2 {
-  font-size: 2.5rem; /* 預設字體大小 */
+  font-size: 2.5rem !important; /* 預設字體大小 */
   color: #ffc107;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -53,12 +54,43 @@
   font-weight: bold; /* Emphasize skill text */
 }
 
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between timeline items */
+  background-color: #1a1a1a; /* Dark background for timeline */
+  padding: 1.5rem;
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 2rem; /* Add spacing from other sections */
+  min-height: unset !important; /* Remove fixed height */
+}
+
+/* Placeholder Block (Takes Space but is Invisible) */
+.timeline-item.placeholder {
+  visibility: hidden; /* Keep space but hide content */
+  height: 75px; /* Set a height similar to real items */
+}
+
+/* Ensure education section does not add extra space */
+.timeline-container.education {
+  min-height: unset !important; /* Remove unnecessary black space */
+}
+
+.category-section {
+  display: block; /* Ensure content stays visible */
+}
+
+.category-section.hidden {
+  display: none; /* Hide only additional items initially */
+}
+
 /* Journey Tabs */
 .journey-tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
+  min-height: 60px; /* Keep button height fixed to prevent shifting */
 }
 
 .journey-tabs button {
@@ -123,6 +155,47 @@
 .timeline-item span {
   font-size: 0.9rem;
   color: #eaeaea; /* Softer white for details */
+}
+
+.category-section {
+  display: none; /* Hide sections by default */
+}
+
+.category-section.active {
+  display: block; /* Show only active section */
+}
+
+.category-section.hidden {
+  display: none; /* Hide inactive sections */
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px; /* Space from skill tags */
+}
+
+.social-icon {
+  font-size: 1.8rem; /* Adjust icon size */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon.youtube {
+  color: #ff0000; /* YouTube red */
+}
+
+.social-icon.github {
+  color: #ffffff; /* White for GitHub */
+}
+
+.social-icon.linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom effect */
 }
 
 /* Responsive Styles */

@@ -33,6 +33,13 @@ const projects = [
     video: 
       'https://www.youtube.com/embed/X7kAB2d0PGs', 
   },
+  {
+    title: 'Local Planner',
+    description:
+      'By utilizing depthimage-to-laserscan package with Intel Realsense camera, we can implement local planning in Visual Nav for robustness.',
+    video: 
+      'https://www.youtube.com/embed/knTCpoTfLF4', 
+  },
 ];
 
 const RoboticVision = () => {

@@ -1,0 +1,273 @@
+/* Section Container */
+.section-container {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px; /* Centralize the content */
+  text-align: left;
+}
+
+.section-container .content-header h2 {
+  font-size: 32px;
+}
+
+.section-container .content-header p {
+  font-size: 22px;
+}
+
+/* Header Styling */
+.content-header {
+  margin-bottom: 20px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.gif {
+  width: 100% !important; /* Ensures two GIFs are side by side */
+  max-width: 500px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-header h2 {
+  font-size: 32px; /* 可以調整此字型大小以適配較小螢幕 */
+  margin-bottom: 15px;
+  color: #ffc107;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word; /* 確保長文字自動換行 */
+  overflow-wrap: break-word; /* 支援所有瀏覽器的文字換行 */
+  white-space: normal; /* 禁止文字一行顯示，允許換行 */
+  line-height: 1.9; /* 調整行高以防止文字擁擠 */
+}
+
+.content-header p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #eaeaea;
+  margin-bottom: 1em;
+  text-align: justify; /* Align text for better readability */
+}
+
+.image-above-video {
+  display: flex;
+  justify-content: center; /* Center the image */
+  margin-bottom: 15px; /* Space between image and video */
+}
+
+.gait-image {
+  width: 100%; /* Make image responsive */
+  max-width: 600px; /* Set a reasonable max width */
+  height: auto;
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow */
+}
+
+/* Main Image Section */
+.main-image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin: 20px 0; /* Add some spacing */
+}
+
+.single-image {
+  max-width: 100%; /* Ensure the image scales to fit its container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Optional: add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: add a shadow effect */
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.main-image:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery Section */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Iframe */
+.responsive-iframe {
+  width: 100%;
+  max-width: 48%; /* Side-by-side on desktop */
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* GIF Container */
+.gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensure proper alignment on all screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gif {
+  width: 48%; /* Consistent width */
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gif:hover {
+  transform: scale(1.05);
+}
+
+/* Video Container */
+.video-container iframe {
+  width: 100% !important; /* Use 80% of the container width for better centering */
+  aspect-ratio: 16 / 9; /* Maintain the aspect ratio */
+  max-width: 2000px !important; /* Prevent videos from being too wide */
+  margin: 20px auto; /* Center the video with spacing */
+  display: block;
+  border-radius: 10px; /* Add slight rounding for a polished look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow */
+}
+
+.videos-container iframe {
+  width: 100% !important; /* Make it match other video sizes */
+  max-width: 800px; /* Adjust for consistency */
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.videos-container {
+  display: flex; /* Align videos side by side */
+  justify-content: space-around; /* Space out the videos evenly */
+  align-items: center; /* Align videos vertically */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  margin-top: 20px; /* Add spacing above the videos */
+}
+
+/* Subtitle Container */
+.subtitle-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.subtitle-container h3 {
+  font-size: 1.3rem !important; /* Reduced size */
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-container .content-header h2 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  .section-container .content-header p {
+    font-size: 18px !important;
+    text-align: left;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .gif {
+    width: 90%; /* Reduced width for smaller screens */
+    margin: 0 auto; /* Center align */
+  }
+
+  .responsive-iframe {
+    max-width: 100%;
+    height: auto; /* Adjust height dynamically */
+    margin-bottom: 15px;
+  }
+
+  .subtitle-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .videos-container {
+    flex-wrap: wrap; /* Allow videos to stack vertically */
+    flex-direction: column; /* Stack videos top to bottom */
+    align-items: center; /* Center the videos */
+  }
+
+  .videos-container iframe {
+    width: 90%; /* Use 90% of the container width for better spacing */
+    max-width: 100%; /* Ensure it doesn’t exceed the container */
+    margin-bottom: 20px; /* Add spacing between the videos */
+  }
+
+  .section-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-header h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .content-header p {
+    text-align: match-parent; /* Ensure consistent alignment */
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .gif-container {
+    flex-direction: column; /* Stack GIFs vertically */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .gif {
+    width: 100%; /* Full width for very small screens */
+    max-width: 350px;
+  }
+
+  .video-container iframe {
+    width: 100%; /* Full width for phones */
+    height: 250px; /* Adjust height for smaller screens */
+  }
+
+  .subtitle-container h3 {
+    font-size: 1rem;
+  }
+
+  .section-container {
+    padding: 5px;
+  }
+}

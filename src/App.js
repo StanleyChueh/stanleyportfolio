@@ -12,7 +12,9 @@ import Workshop from './components/ProjectDetails/Workshop';
 import RoboticVision from './components/ProjectDetails/RoboticVision';
 import ReinforcementLearning from './components/ProjectDetails/ReinforcementLearning';
 import RobotNavigationStudy from './components/ProjectDetails/RobotNavigationStudy';
-
+import Quadrupedrobot from './components/ProjectDetails/Quadrupedrobot';
+import ImitationLearningLeRobot from './components/ProjectDetails/ImitationLearningLeRobot';
+import ImitationLearningRobomimic from './components/ProjectDetails/ImitationLearningRobomimic';
 import './styles/App.css';
 
 function App() {
@@ -50,6 +52,18 @@ function App() {
             <Route
               path="/projects/RobotNavigationStudy"
               element={<RobotNavigationStudy />}
+            />
+            <Route
+              path="/projects/Quadrupedrobot"
+              element={<Quadrupedrobot />}
+            />
+            <Route
+              path="/projects/ImitationLearningLeRobot"
+              element={<ImitationLearningLeRobot />}
+            />
+            <Route
+              path="/projects/ImitationLearningRobomimic"
+              element={<ImitationLearningRobomimic />}
             />
           </Routes>
         </main>
